@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pind code api</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul class="hulist">
+                <li class="hlist">Home</li>
+                <li class="hlist">Contact</li>
+                <li class="hlist">About</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="bigcontainer">
+            <div class="container">
+                <div class="headimg1">
+                    <div class="headimg2">
+                        <a href="" target="_self"><img src="images/pin code api.png" height="90%" width="100%" ></a>
+                    </div>
+                </div>
+                
+                <form action="form.php" class="form1">
+                    <div class="barsearch">
+                        <div>
+                            <label for="pincode">Indian Pincode search:  </label>
+                            <input type="search" name="pincode" id="pinnumber" class="inptsearch" placeholder="Enter Pincode" maxlength="6" onkeyup="onlynum(this)" required>
+                            <button type="button" class="btnsearch" onclick="getinputvalue();"><i class="fa fa-search"></i></button>
+                        </div>
+                        <!-- <div class="clear_btn"><input type="button" class="clearbtn" placeholder="clear" value="CLEAR"></div> -->
+                    </div>
+                </form>
+                <br>
+                <br>
+                <div class="outputbox0" >
+
+                    <div class="outputbox1" id="displayoutput">
+                        
+                        <!-- <table class="table0">
+                              <tr class="thead0">
+                                <th class="thead">AREA NAME</th>
+                                <th class="thead">BRANCH TYPE</th>
+                                <th class="thead">STATE</th>
+                                <th class="thead">BLOCK</th>
+                                <th class="thead">PINCIOED</th>
+                              </tr>
+                        </table> -->
+                    </div>
+                </div> 
+            </div>
+        </div>
+        <!-- <div class="loading"> -->
+    </main>
+    <footer>
+        <div class="footer1">
+            <P>COPYRIGHT &copy </P>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>
