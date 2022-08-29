@@ -17,10 +17,11 @@ function getinputvalue(){
         return responce.json(); //this is new promise
     }).then((data) => {
         console.log(data[0].Message);
-        // var length=data[0].PostOffice.length;
+        var length=data[0].PostOffice.length;
         var inptlength=inptvalue.length;
         console.log(inptlength);
         console.log(inptvalue);
+        console.log(length);
 
 
             if (inptlength!=6){ //6 digit length validation
@@ -32,8 +33,9 @@ function getinputvalue(){
             } else if(inptlength==6) {
                 let data1="";
                 data.map(function (values) {
-                    
-               data1 = `
+              for(i=0;i<length;i++){   
+               data1 = 
+               `
                <table class="table0">
                                  <tr id="idthead" class="thead0">
                                    <th class="thead">AREA NAME</th>
@@ -43,21 +45,17 @@ function getinputvalue(){
                                    <th class="thead">PINCIOED</th>
                                  </tr>
                                  <tr>
-                                   <td class="thead thead2">${values.PostOffice[0].Name}       </td>
-                                   <td class="thead thead2">${values.PostOffice[0].BranchType} </td>
-                                   <td class="thead thead2">${values.PostOffice[0].Block}      </td>
-                                   <td class="thead thead2">${values.PostOffice[0].State}      </td>
-                                   <td class="thead thead2">${values.PostOffice[0].Pincode}    </td>
-                                 </tr>
-                                 <tr>
-                                   <td class="thead thead2">${values.PostOffice[1].Name}      </td>
-                                   <td class="thead thead2">${values.PostOffice[1].BranchType}</td>
-                                   <td class="thead thead2">${values.PostOffice[1].Block}     </td>
-                                   <td class="thead thead2">${values.PostOffice[1].State}     </td>
-                                   <td class="thead thead2">${values.PostOffice[1].Pincode}   </td>
+                                   <td class="thead thead2">${values.PostOffice[i].Name}       </td>
+                                   <td class="thead thead2">${values.PostOffice[i].BranchType} </td>
+                                   <td class="thead thead2">${values.PostOffice[i].Block}      </td>
+                                   <td class="thead thead2">${values.PostOffice[i].State}      </td>
+                                   <td class="thead thead2">${values.PostOffice[i].Pincode}    </td>
+                                 
+                           
                            </table>
                            
                      `;
+                  } 
                      outputcontainer.style.opacity=1 ;
                 });
                 document.getElementById("displayoutput").innerHTML=data1;
@@ -66,15 +64,4 @@ function getinputvalue(){
             
     });
 } 
-
-
-// var a=getinputvalue('inptvalue');
-// const getpincodedata= function(DPINCODE){
-//     fetch(`https://api.postalpincode.in/pincode/${DPINCODE}`).then(function (responce) {
-//         console.log(responce);
-//         return responce.json(); //this is new promise
-//     }).then(function (DATA) {
-//         console.log(DATA)
-//     });
-// };
 
